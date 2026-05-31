@@ -1,0 +1,7 @@
+fase,resultado_estadistico,interpretacion_negocio
+Cargue y limpieza,"5,491,824 registros reales; 479,541 ceros futuros excluidos",Se evita tomar semanas no observadas como ventas cero. Esto protege al modelo de aprender una caida artificial de demanda.
+EDA temporal,"Periodo 2023-01-01 a 2025-08-01; ventas totales 9,062,170","Permite planear por calendario, detectar picos semanales y preparar inventario antes de los meses fuertes."
+Clientes y productos,14 clientes explican cerca del 80% de ventas; 175 productos explican cerca del 80% de ventas,"Si pocas cuentas o productos concentran ventas, deben tener seguimiento comercial prioritario y alertas tempranas."
+Inventarios,"8,957 combinaciones con demanda proyectada mayor al inventario",Estas combinaciones tienen riesgo de perdida de ventas por falta de producto y deben revisarse para despacho.
+Modelado,Modelo ganador: XGBoost; MAE test 21.37; WAPE 58.03%,"El modelo reduce error frente a reglas simples y permite priorizar acciones, no solo describir el pasado."
+Recomendaciones,"Riesgo de perdida estimado: 8,213 unidades; clientes alto churn: 16","El equipo comercial puede combinar reabastecimiento, gestion de clientes en caida y foco en productos de alta rotacion."
