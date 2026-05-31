@@ -120,6 +120,9 @@ def inject_css() -> None:
 @st.cache_data(show_spinner=False)
 def load_csv(filename: str, parse_dates: tuple[str, ...] = ()) -> pd.DataFrame:
     path = CSV_DIR / filename
+    if not path.exists() and path.suffix == ".csv":
+        gz_path = path.with_suffix(".csv.gz")
+        path = gz_path if gz_path.exists() else path
     if not path.exists():
         return pd.DataFrame()
     df = pd.read_csv(path)
