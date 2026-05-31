@@ -1,9 +1,0 @@
-mkdir carpeta_principal
-
-mv csv outputs/
-mv imagenes outputs/
-mv otros outputs/
-
-git add .
-git commit -m "Reorganizar carpetas dentro de carpeta_principal"
-git push
