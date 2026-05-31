@@ -1,0 +1,9 @@
+mkdir outputs
+
+mv csv outputs/
+mv imagenes outputs/
+mv otros outputs/
+
+git add .
+git commit -m "Reorganizar carpetas dentro de outputs"
+git push
